@@ -16,10 +16,126 @@ body{
 
 #main-container{
     background-image: url(./img/pattern-background-desktop.svg);
+
     height: 100%;
     min-height: 100vh;
     background-size:contain;
     background-repeat: no-repeat;
-    background-color: var(--pale-blue)
+    background-color: var(--pale-blue);
 
+}
+
+#card-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 450px;
+
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+
+#bottom{
+    background: white;
+    padding:20px;
+    text-align: center;
+    position:relative;
+    top: -5px;
+
+}
+h2{
+    font-weight: 900;
+}
+#description{
+    display: inline-block;
+    width: 75%;
+    color: var(--desaturated-blue);
+    line-height: 1.5em;
+    font-weight: 500;
+}
+
+#price-container{
+    margin: 0 auto;
+
+    margin-top: 30px;
+    background: var(--very-pale-blue);
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;   
+    align-items: center;
+    margin-bottom: 30px;
+    width: 80%;
+}
+
+#price-container h3 {
+    margin: 5px;
+    margin-left: 15px;
+}
+
+#price-container div{
+    margin-left: 20px;
+}
+#price-container a{
+   margin-left: auto;
+   margin-right: 20px;
+   color: var(--bright-blue);
+   font-weight: 700;
+}
+
+#price-container a:hover{
+    opacity: 75%;
+}
+
+#payment-btn{
+    width: 88%;
+    padding: 20px 15px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 700;
+    background: var(--bright-blue);
+    box-shadow: 0px 27px 25px -11px var(--desaturated-blue);
+    cursor: pointer;
+}
+
+#payment-btn:hover{
+opacity: 75%;
+}
+
+#cancel{
+    font-weight: 900;
+    display: block;
+    margin-top: 30px;
+    color: var(--desaturated-blue);
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+#cancel:hover{
+    color: var(--dark-blue);
+}
+
+@media (max-width: 450px){
+    #main-container{
+        background-image: url(./img/pattern-background-mobile.svg);
+    }
+    #top img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    #card-container{
+        max-width: 90%;
+    }
+
+    #price-container{
+        font-size: 12px;
+    }
 }
